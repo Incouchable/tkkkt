@@ -27,32 +27,34 @@ public class LoaderSpeciality extends LoaderTemplate {
 				new Effect(TypeEffect.TCCP, false, 0.8),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Maître dans l'Usage de la Hache"); put(Language.EN, "Axe Grinder"); }}, 45, "0-2", new Calculable[] {
-				new Effect(TypeEffect.DegHa, false, 1.5),
-				new Effect(TypeEffect.DegHa2M, false, 1.5),
+				new Effect(TypeEffect.DegHa, false, 1),
+				new Effect(TypeEffect.DegHa2M, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Confession Brutable"); put(Language.EN, ""); }}, 45, "0-3", new Calculable[] {
-				new Proc(1, Activation.Phys, new Calculable[] {
-					new Effect(TypeEffect.DegHuma, false, 50),
-				}),
+				new Effect(TypeEffect.DegMa, false, 1),
+				new Effect(TypeEffect.DegMa2M, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Armes à Vacillement"); put(Language.EN, ""); }}, 45, "0-4", new Calculable[] {
-				new Effect(TypeEffect.VitAtk, false, 1),
+				new Effect(TypeEffect.AGI, false, 9),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Tatouage Ardent"); put(Language.EN, "Burning Tattoo"); }}, 45, "0-5", new Calculable[] {
-				new Effect(TypeEffect.Feu, false, 3),
+				new Effect(TypeEffect.DegEp, false, 1),
+				new Effect(TypeEffect.DegEp2M, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Détection de Défaut"); put(Language.EN, "Chink in the Armor"); }}, 60, "0-6", new Calculable[] {
-				new Effect(TypeEffect.Toucher, false, 1),
+				new Effect(TypeEffect.DegEp2M, false, 2),
+				new Effect(TypeEffect.DegMa2M, false, 2),
+				new Effect(TypeEffect.DegHa2M, false, 2),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Cœur Féroce"); put(Language.EN, ""); }}, 60, "0-7", new Calculable[] {
-				new Effect(TypeEffect.AGI, false, 9),
+				new Effect(TypeEffect.VitAtk, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Volonté Tenace"); put(Language.EN, "Steadfast Will"); }}, 60, "0-8", new Calculable[] {
 				new Effect(TypeEffect.RTCCP, false, 2),
 				new Effect(TypeEffect.RTCCM, false, 2),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Forme Rapide"); put(Language.EN, "Lightning Slasher"); }}, 60, "0-9", new Calculable[] {
-				new Effect(TypeEffect.DegDuo, false, 1.5),
+				new Effect(TypeEffect.VitAtkDuo, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Carrure de Fer"); put(Language.EN, "Iron Fury"); }}, 75, "0-10", new Calculable[] {
 				new Effect(TypeEffect.DefP, true, 1),
@@ -65,14 +67,14 @@ public class LoaderSpeciality extends LoaderTemplate {
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Figure de Proue"); put(Language.EN, "Front Guard Stance"); }}, 75, "0-13", new Calculable[] {
 				new Effect(TypeEffect.Parade, false, 1),
+				//Add Rparade
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Exploration du Cerveau"); put(Language.EN, "Mental Fortitude"); }}, 75, "0-14", new Calculable[] {
 				new Effect(TypeEffect.PM, true, 1),
+				new Effect(TypeEffect.PV, true, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Assaut"); put(Language.EN, ""); }}, 75, "0-15", new Calculable[] {
-				new Effect(TypeEffect.DegEp2M, false, 1),
-				new Effect(TypeEffect.DegMa2M, false, 1),
-				new Effect(TypeEffect.DegHa2M, false, 1),
+				new Effect(TypeEffect.Toucher, true, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Endurance"); put(Language.EN, "Stamina"); }}, 91, "0-16", new Calculable[] {
 				new Effect(TypeEffect.RDCCP, false, 1),
@@ -110,36 +112,35 @@ public class LoaderSpeciality extends LoaderTemplate {
 	
 	static Speciality[] getClass1() {
 		return new Speciality[] {
-			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Assassin de Mort-Vivant"); put(Language.EN, ""); }}, 45, "1-0", new Calculable[] {
-				new Proc(1, Activation.Phys, new Calculable[] {
-					new Effect(TypeEffect.DegMort, false, 50),
-				}),
+			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Inébranlable"); put(Language.EN, ""); }}, 45, "1-0", new Calculable[] {
+				new Effect(TypeEffect.HealD, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Maitre dans l'usage du bouclier"); put(Language.EN, ""); }}, 45, "1-1", new Calculable[] {
 				new Effect(TypeEffect.Parade, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Entrainement à la résistance"); put(Language.EN, ""); }}, 45, "1-2", new Calculable[] {
-				new Effect(TypeEffect.VIT, false, 3),
+				new Effect(TypeEffect.VIT, false, 9),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Pas de lumière"); put(Language.EN, ""); }}, 45, "1-3", new Calculable[] {
-				new Effect(TypeEffect.Depla, false, 1.1),
+				new Effect(TypeEffect.Depla, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Connaitre son ennemi"); put(Language.EN, ""); }}, 45, "1-4", new Calculable[] {
-				new Effect(TypeEffect.Toucher, false, 1),
+				new Effect(TypeEffect.ToucherP, false, 2),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Foi en la lumière sacrée"); put(Language.EN, ""); }}, 45, "1-5", new Calculable[] {
-				new Effect(TypeEffect.Sacre, false, 1),
-				new Effect(TypeEffect.Ombre, false, 1),
-				new Effect(TypeEffect.Foudre, false, 1),
-				new Effect(TypeEffect.Feu, false, 1),
-				new Effect(TypeEffect.Glace, false, 1),
-				new Effect(TypeEffect.Nature, false, 1),
+				new Effect(TypeEffect.Sacre, false, 4),
+				new Effect(TypeEffect.Ombre, false, 4),
+				new Effect(TypeEffect.Foudre, false, 4),
+				new Effect(TypeEffect.Feu, false, 4),
+				new Effect(TypeEffect.Glace, false, 4),
+				new Effect(TypeEffect.Nature, false, 4),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Chevalerie"); put(Language.EN, ""); }}, 60, "1-6", new Calculable[] {
 				new Effect(TypeEffect.PV, true, 1),
 			}),
-			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Provocation de l'entraîneur"); put(Language.EN, ""); }}, 60, "1-7", new Calculable[] {
-				new Effect(TypeEffect.MEN, false, 1),
+			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Bouclier résistant"); put(Language.EN, ""); }}, 60, "1-7", new Calculable[] {
+				new Effect(TypeEffect.DefM, true, 1),
+				new Effect(TypeEffect.DefP, true, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Injection de force"); put(Language.EN, ""); }}, 60, "1-8", new Calculable[] {
 				new Effect(TypeEffect.FCE, false, 9),
@@ -151,58 +152,64 @@ public class LoaderSpeciality extends LoaderTemplate {
 				new Effect(TypeEffect.ReducSkillM, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Meneur"); put(Language.EN, ""); }}, 75, "1-10", new Calculable[] {
-				new Effect(TypeEffect.DegEp, false, 1.2),
-				new Effect(TypeEffect.DegMa, false, 1.2),
-				new Effect(TypeEffect.DegHa, false, 1.2),
+				new Effect(TypeEffect.DegEp, false, 1),
+				new Effect(TypeEffect.DegMa, false, 1),
+				new Effect(TypeEffect.DegHa, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Protection divine"); put(Language.EN, ""); }}, 75, "1-11", new Calculable[] {
 				new Effect(TypeEffect.DefM, true, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Sans merci"); put(Language.EN, ""); }}, 75, "1-12", new Calculable[] {
 				new Effect(TypeEffect.TCCP, false, 1),
+				new Effect(TypeEffect.TCCM, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Esprit Alerte"); put(Language.EN, ""); }}, 75, "1-13", new Calculable[] {
 				new Effect(TypeEffect.VitComp, false, 1.5),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Mouvement lucide"); put(Language.EN, ""); }}, 75, "1-14", new Calculable[] {
-				new Effect(TypeEffect.ESQ, false, 1),
+				new Effect(TypeEffect.ESQ, false, 2),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Frappe du juge"); put(Language.EN, ""); }}, 75, "1-15", new Calculable[] {
-				new Effect(TypeEffect.DegEp2M, false, 1.2),
-				new Effect(TypeEffect.DegMa2M, false, 1.2),
-				new Effect(TypeEffect.DegHa2M, false, 1.2),
+				new Effect(TypeEffect.DegEp2M, false, 1.5),
+				new Effect(TypeEffect.DegMa2M, false, 1.5),
+				new Effect(TypeEffect.DegHa2M, false, 1.5),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Immense Lumière"); put(Language.EN, ""); }}, 91, "1-16", new Calculable[] {
 				new Effect(TypeEffect.PM, true, 1),
+				new Effect(TypeEffect.AtkM, true, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Présence d'Esprit"); put(Language.EN, ""); }}, 91, "1-17", new Calculable[] {
-				new Effect(TypeEffect.CostComp, false, 5),
+				new Effect(TypeEffect.CostComp, false, 10),
 			}),
-			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Bouclier"); put(Language.EN, ""); }}, 91, "1-18", new Calculable[] {
-				new Effect(TypeEffect.DefP, true, 1),
+			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Provocation dogmatique"); put(Language.EN, ""); }}, 91, "1-18", new Calculable[] {
+				new Effect(TypeEffect.MEN, false, 4),
+				new Effect(TypeEffect.RTCCP, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Hardiesse"); put(Language.EN, ""); }}, 91, "1-19", new Calculable[] {
-				new Effect(TypeEffect.RDCCP, false, 1.5),
-				new Effect(TypeEffect.VOL, false, 5),
+				new Effect(TypeEffect.RDCCP, false, 3),
+				new Effect(TypeEffect.RDCCM, false, 3),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Croissance physique"); put(Language.EN, ""); }}, 100, "1-20", new Calculable[] {
-				new Effect(TypeEffect.VIT, 3, TypeEffect.FCE, TypeCalcul.CONVERTALL),
+				new Effect(TypeEffect.VIT, 4, TypeEffect.FCE, TypeCalcul.CONVERTALL),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Entraînement d'élite"); put(Language.EN, ""); }}, 100, "1-21", new Calculable[] {
 				new Effect(TypeEffect.FCE, true, 1),
+				new Effect(TypeEffect.INT, true, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Réflexes travaillés"); put(Language.EN, ""); }}, 100, "1-22", new Calculable[] {
+				new Effect(TypeEffect.VOL, false, 5),
 				new Effect(TypeEffect.AGI, false, 12),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Auto-défense"); put(Language.EN, ""); }}, 100, "1-23", new Calculable[] {
-				new Effect(TypeEffect.RParade, false, 1),
+				new Effect(TypeEffect.PeneP, false, 1),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Barrière de défense"); put(Language.EN, ""); }}, 100, "1-24", new Calculable[] {
-				new Effect(TypeEffect.ShieldDefP, false, 1.5),
-				new Effect(TypeEffect.ShieldDefM, false, 1),
+				new Effect(TypeEffect.ShieldDefP, true, 2),
+				new Effect(TypeEffect.ShieldDefM, true, 2),
 			}),
 			new Speciality(new EnumMap<Language, String>(Language.class) {{ put(Language.FR, "Entraînement à l'armure lourde"); put(Language.EN, ""); }}, 100, "1-25", new Calculable[] {
-				new Effect(TypeEffect.ReducPeneP, false, 1.2),
+				new Effect(TypeEffect.ReducPeneP, true, 2),
+				new Effect(TypeEffect.ReducPeneM, true, 1),
 			}),
 		};
 	}
